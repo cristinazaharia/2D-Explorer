@@ -1,0 +1,14 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Loop.gd" type="Script" id=1]
+[ext_resource path="res://EnemyTunel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SmallTile.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://AnimatedPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Tile.tscn" type="PackedScene" id=8]
+
+[node name="Loop" type="Node2D"]
+script = ExtResource( 1 )
+scenes = [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 8 ) ]

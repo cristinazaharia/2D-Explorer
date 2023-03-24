@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameStart.gd" type="Script" id=2]
+[ext_resource path="res://Char/wallpaper.png" type="Texture" id=3]
+
+[node name="GameStart" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Wallpaper" type="Sprite" parent="."]
+position = Vector2( 514, 298 )
+scale = Vector2( 1.31532, 1.30905 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 458.0
+margin_top = 288.0
+margin_right = 609.0
+margin_bottom = 342.0
+custom_colors/font_color_disabled = Color( 0.0156863, 0.0117647, 0.0117647, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+toggle_mode = true
+text = "Play"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 392.0
+margin_top = 183.0
+margin_right = 676.0
+margin_bottom = 232.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "E X P L O R E R"
+align = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

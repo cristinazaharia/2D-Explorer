@@ -1,0 +1,383 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://CameraController.gd" type="Script" id=5]
+[ext_resource path="res://UserInterface.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SmallTile.tscn" type="PackedScene" id=7]
+[ext_resource path="res://AnimatedPlayer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://EnemyTunel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MainScene.gd" type="Script" id=11]
+
+[node name="MainScene" type="Node2D"]
+position = Vector2( 31, 24 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -87.0 ]
+}
+
+[node name="Plx-1" parent="." instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 1951, 267 )
+scale = Vector2( 2.06592, 2.71759 )
+
+[node name="Plx-2" parent="." instance=ExtResource( 3 )]
+show_behind_parent = true
+position = Vector2( 1158, 263.438 )
+scale = Vector2( 2.06681, 2.67187 )
+
+[node name="Plx-3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 366, 265 )
+scale = Vector2( 2.06161, 2.66956 )
+
+[node name="Plx-4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2741, 264 )
+scale = Vector2( 2.06315, 2.72917 )
+
+[node name="Background" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3565, 257.5 )
+scale = Vector2( 2.23307, 2.63426 )
+
+[node name="Background2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4406, 256 )
+scale = Vector2( 2.15495, 2.63079 )
+
+[node name="Background3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5205, 255.313 )
+scale = Vector2( 2.04688, 2.636 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( 99, 297 )
+
+[node name="SmallTile" parent="." instance=ExtResource( 7 )]
+position = Vector2( 480, 341 )
+
+[node name="SmallTile3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 284, 468 )
+
+[node name="SmallTile2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 710, 260 )
+
+[node name="SmallTile5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 862, 386 )
+
+[node name="SmallTile4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 863, 467 )
+
+[node name="Tile" parent="." instance=ExtResource( 2 )]
+position = Vector2( 138, 541 )
+
+[node name="Tile2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 457, 540 )
+
+[node name="Tile3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 776, 539 )
+
+[node name="Coin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 480, 275 )
+
+[node name="Coin" parent="." instance=ExtResource( 4 )]
+position = Vector2( 707, 189 )
+
+[node name="Wall" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 172 )
+
+[node name="Wall2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, -123 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 6 )]
+margin_left = -35.0
+margin_top = -19.0
+margin_right = -896.0
+margin_bottom = -503.0
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+position = Vector2( 511, 299 )
+offset = Vector2( 360, 0 )
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
+script = ExtResource( 5 )
+
+[node name="Tile4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1097, 539 )
+
+[node name="Tile5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1417, 540 )
+
+[node name="Tile6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2058, 541 )
+
+[node name="Tile7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1737, 539 )
+
+[node name="Tile8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1601, 354 )
+
+[node name="Coin" parent="Tile8" instance=ExtResource( 4 )]
+position = Vector2( -49, -240 )
+
+[node name="Coin2" parent="Tile8" instance=ExtResource( 4 )]
+position = Vector2( 74, -241 )
+
+[node name="Coin3" parent="Tile8" instance=ExtResource( 4 )]
+position = Vector2( 197, -143 )
+
+[node name="SmallTile" parent="Tile8" instance=ExtResource( 7 )]
+position = Vector2( 202, -4 )
+
+[node name="Enemy" parent="." instance=ExtResource( 9 )]
+position = Vector2( 369, 484 )
+moveDist = 400
+
+[node name="SmallTile6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1407, 351 )
+
+[node name="Coin3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1408, 219 )
+
+[node name="Coin4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1093, 447 )
+
+[node name="Coin5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1215, 445 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3351, 483 )
+
+[node name="Tile9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2376, 540 )
+
+[node name="Tile10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2695, 540 )
+
+[node name="Tile11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3014, 540 )
+
+[node name="Tile12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3330, 540 )
+
+[node name="SmallTile7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2051, 302 )
+
+[node name="SmallTile9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2051, 384 )
+
+[node name="Tile13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3649, 540 )
+
+[node name="SmallTile10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2052, 465 )
+
+[node name="EnemyTunel" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2903, 284 )
+
+[node name="Coin6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2050, 106 )
+
+[node name="Tile14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2864, 361 )
+
+[node name="SmallTile12" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3063, 356 )
+
+[node name="SmallTile13" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2581, 360 )
+
+[node name="Coin12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2660, 181 )
+
+[node name="Coin7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2147, 349 )
+
+[node name="Coin8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2196, 423 )
+
+[node name="Coin9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2267, 457 )
+
+[node name="SmallTile8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2661, 358 )
+
+[node name="SmallTile11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2659, 280 )
+
+[node name="Coin10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2367, 458 )
+
+[node name="Coin11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2468, 456 )
+
+[node name="Coin13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2896, 84 )
+
+[node name="SmallTile14" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3266, 218 )
+
+[node name="Coin14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3267, 128 )
+
+[node name="SmallTile15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1972, 466 )
+
+[node name="Coin15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1963, 355 )
+
+[node name="Coin16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3064, 248 )
+
+[node name="Coin17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2799, 457 )
+
+[node name="SmallTile16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3265, 463 )
+
+[node name="SmallTile17" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3478, 317 )
+
+[node name="SmallTile18" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3397, 317 )
+
+[node name="EnemyTunel2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4650, 462 )
+
+[node name="Tile15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3970, 541 )
+
+[node name="Tile16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4290, 541 )
+
+[node name="Tile17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4607, 541 )
+
+[node name="Coin18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3390, 206 )
+
+[node name="Coin19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3485, 205 )
+
+[node name="SmallTile19" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3748, 466 )
+
+[node name="Coin20" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3918, 458 )
+
+[node name="Coin21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4013, 457 )
+
+[node name="Coin22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4110, 455 )
+
+[node name="Tile18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4193, 318 )
+
+[node name="Coin23" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4218, 454 )
+
+[node name="SmallTile20" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3994, 316 )
+
+[node name="SmallTile21" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4395, 312 )
+
+[node name="Coin24" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3746, 356 )
+
+[node name="Coin25" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3990, 145 )
+
+[node name="SmallTile22" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4394, 233 )
+
+[node name="Coin26" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4060, 218 )
+
+[node name="Coin27" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4191, 256 )
+
+[node name="Coin28" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4316, 227 )
+
+[node name="Coin29" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4398, 133 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4982, 265 )
+
+[node name="Tile19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4928, 540 )
+
+[node name="Tile20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5243, 540 )
+
+[node name="Tile21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5437, 541 )
+
+[node name="Tile22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5095, 318 )
+
+[node name="SmallTile23" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4896, 312 )
+
+[node name="Coin30" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4897, 168 )
+
+[node name="Coin31" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4996, 166 )
+
+[node name="SmallTile25" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5379, 315 )
+
+[node name="SmallTile26" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5381, 239 )
+
+[node name="Coin32" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5371, 117 )
+
+[node name="Coin38" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4513, 350 )
+
+[node name="Coin39" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5285, 168 )
+
+[node name="Coin33" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4792, 450 )
+
+[node name="Coin34" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4898, 448 )
+
+[node name="Coin35" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5015, 449 )
+
+[node name="Coin40" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5514, 321 )
+
+[node name="Coin36" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5142, 446 )
+
+[node name="Coin37" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5277, 449 )
+
+[node name="Tile23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5180, 318 )
+
+[node name="Wall8" parent="." instance=ExtResource( 1 )]
+position = Vector2( -124, 174 )
+
+[node name="Wall6" parent="." instance=ExtResource( 1 )]
+position = Vector2( -124, -121 )
+
+[node name="Wall3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5632, 174 )
+
+[node name="Wall4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5632, -120 )

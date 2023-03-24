@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UserInterface.gd" type="Script" id=2]
+[ext_resource path="res://Char/coin (2).png" type="Texture" id=3]
+
+[node name="UserInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ScoreValue" type="Label" parent="."]
+margin_left = 115.0
+margin_top = 51.0
+margin_right = 153.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 1 )
+text = "1"
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 42.0
+margin_top = 51.0
+margin_right = 115.0
+margin_bottom = 121.0
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 21.0
+margin_right = 153.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+text = "Score"
+align = 1
+valign = 1
