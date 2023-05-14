@@ -1,4 +1,4 @@
-# 2DMiniGame
+# 2D-explorer
   Explorer is a 2D mini-game created using Godot engine wich uses its specific programming language called GDScript. The GUI of the mini-game was designed using sprites and animations.
   A start up window is being displayed and the user can start the game:
   
